@@ -1,5 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --left-panel-color: rgba(10, 10, 10, 0.72);
+  --left-panel-blur: blur(50px);
+  --left-panel-border-radius: 12px 0px 0px 12px;
+
+  --top-panel-blur: blur(50px);
+  --top-panel-border: 1px solid #3c3c3c;
+  --top-panel-border-radius: 0px 12px 0px 0px;
+  --top-panel-color: rgba(10, 10, 10, 0.92);
+
+  --main-panel-color: rgba(10, 10, 10, 0.94);
+  --main-panel-border-radius: 0px 0px 12px 0px;
+  --main-panel-blur: blur(50px);
+
+  --left-panel-padding-56: 56px 0;
+  --top-panel-padding-56: 0 56px;
+  --main-panel-padding-56: 56px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/bg.webp);
+  font-family: 'Inter', sans-serif;
+}
+
+svg {
+  cursor: pointer;
+  color: #787878;
+  transition: all 0.4s ease;
+}
+
+svg:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.container {
+  height: 100vh;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 160px 101.1fr 1fr;
+  grid-template-rows: 160px 1.8fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'Side-Panel Top-Panel Top-Panel'
+    'Side-Panel Main-Panel Main-Panel'
+    'Side-Panel Main-Panel Main-Panel';
+}
+
+.Side-Panel {
+  grid-area: Side-Panel;
+  background: var(--left-panel-color);
+  backdrop-filter: var(--left-panel-blur);
+  border-radius: var(--left-panel-border-radius);
+  padding: var(--left-panel-padding-56);
+}
+
+.Top-Panel {
+  grid-area: Top-Panel;
+  background: var(--top-panel-color);
+  backdrop-filter: var(--top-panel-blur);
+  border-radius: var(--top-panel-border-radius);
+  border-bottom: var(--top-panel-border);
+  padding: var(--top-panel-padding-56);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Main-Panel {
+  grid-area: Main-Panel;
+  background: var(--main-panel-color);
+  border-radius: var(--main-panel-border-radius);
+  backdrop-filter: var(--main-panel-blur);
+  padding: var(--main-panel-padding-56);
 }
