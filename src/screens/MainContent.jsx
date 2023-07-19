@@ -1,7 +1,14 @@
 import React from 'react'
+import AddTask from '../components/AddTask'
+import TaskFilter from '../components/TaskFilter'
 
 const MainContent = () => {
-  return <div>MainContent</div>
+  return (
+    <>
+      <AddTask />
+      <TaskFilter />
+    </>
+  )
 }
 
 export default MainContent

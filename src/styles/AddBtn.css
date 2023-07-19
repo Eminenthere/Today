@@ -1,0 +1,10 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 72px;
+  width: 160px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #3b2de2 0%, #4a00e0 100%);
+}

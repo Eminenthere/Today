@@ -16,13 +16,14 @@
 
   --left-panel-padding-56: 56px 0;
   --top-panel-padding-56: 0 56px;
-  --main-panel-padding-56: 56px;
+  --main-panel-padding-56: 44px 56px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -30,10 +31,16 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
 svg {
   cursor: pointer;
   color: #787878;
-  transition: all 0.4s ease;
 }
 
 svg:hover {
